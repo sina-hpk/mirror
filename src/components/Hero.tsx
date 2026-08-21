@@ -109,7 +109,7 @@ export default function Hero() {
               <div className="gradient-border relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl shadow-primary-950/50">
                 {/* Scene behind the glass: real interior photo */}
                 <Image
-                  src="/images/hero-interior.jpg"
+                  src="/images/hero-interior.webp"
                   alt="نمای داخلی مدرن پشت شیشه هوشمند فلمبیس"
                   fill
                   priority

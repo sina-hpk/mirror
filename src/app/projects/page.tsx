@@ -10,12 +10,12 @@ export const metadata = {
 }
 
 const projects = [
-  { icon: Plane, title: 'فرودگاه بین‌المللی امام خمینی(ره)', location: 'تهران', area: '۵۰۰+ متر مربع', desc: 'نصب پارتیشن‌های شیشه هوشمند PNLC در ترمینال جدید و اتاق‌های کنترل.', year: '۱۴۰۴', image: '/images/project-conference.jpg' },
-  { icon: Hospital, title: 'بیمارستان مهر تهران', location: 'تهران', area: '۳۰۰ متر مربع', desc: 'شیشه هوشمند اتاق‌های عمل و ICU با کنترل پدالی و ضدباکتری.', year: '۱۴۰۳', image: '/images/healthcare.jpg' },
-  { icon: Building2, title: 'مجتمع تجاری الماس', location: 'اصفهان', area: '۸۰۰ متر مربع', desc: 'ویترین‌ها و پارتیشن‌های اداری مغازه‌ها با کنترل متمرکز.', year: '۱۴۰۳', image: '/images/project-office-tower.jpg' },
-  { icon: Home, title: 'مجتمع مسکونی لوکس آرمان', location: 'لواسان', area: '۲۰۰ متر مربع', desc: 'پنجره‌های سقفی و حمام‌ها با کنترل از اپلیکیشن خانه هوشمند.', year: '۱۴۰۲', image: '/images/project-villa.jpg' },
-  { icon: Landmark, title: 'هتل پنج‌ستاره دریا', location: 'کیش', area: '۶۰۰ متر مربع', desc: 'سوییت‌ها و رستوران گردان با شیشه هوشمند ضد نم.', year: '۱۴۰۲', image: '/images/project-hotel.jpg' },
-  { icon: Store, title: 'شوروم خودرو پارس', location: 'کرج', area: '۱۵۰ متر مربع', desc: 'اتاق‌های تحویل VIP و دفتر مدیریت با کنترل حریم خصوصی.', year: '۱۴۰۱', image: '/images/automotive.jpg' },
+  { icon: Plane, title: 'فرودگاه بین‌المللی امام خمینی(ره)', location: 'تهران', area: '۵۰۰+ متر مربع', desc: 'نصب پارتیشن‌های شیشه هوشمند PNLC در ترمینال جدید و اتاق‌های کنترل.', year: '۱۴۰۴', image: '/images/project-conference.webp' },
+  { icon: Hospital, title: 'بیمارستان مهر تهران', location: 'تهران', area: '۳۰۰ متر مربع', desc: 'شیشه هوشمند اتاق‌های عمل و ICU با کنترل پدالی و ضدباکتری.', year: '۱۴۰۳', image: '/images/healthcare.webp' },
+  { icon: Building2, title: 'مجتمع تجاری الماس', location: 'اصفهان', area: '۸۰۰ متر مربع', desc: 'ویترین‌ها و پارتیشن‌های اداری مغازه‌ها با کنترل متمرکز.', year: '۱۴۰۳', image: '/images/project-office-tower.webp' },
+  { icon: Home, title: 'مجتمع مسکونی لوکس آرمان', location: 'لواسان', area: '۲۰۰ متر مربع', desc: 'پنجره‌های سقفی و حمام‌ها با کنترل از اپلیکیشن خانه هوشمند.', year: '۱۴۰۲', image: '/images/project-villa.webp' },
+  { icon: Landmark, title: 'هتل پنج‌ستاره دریا', location: 'کیش', area: '۶۰۰ متر مربع', desc: 'سوییت‌ها و رستوران گردان با شیشه هوشمند ضد نم.', year: '۱۴۰۲', image: '/images/project-hotel.webp' },
+  { icon: Store, title: 'شوروم خودرو پارس', location: 'کرج', area: '۱۵۰ متر مربع', desc: 'اتاق‌های تحویل VIP و دفتر مدیریت با کنترل حریم خصوصی.', year: '۱۴۰۱', image: '/images/automotive.webp' },
 ]
 
 export default function ProjectsPage() {

@@ -22,7 +22,7 @@ const allProducts = [
     ],
     applications: ['پارتیشن اداری', 'شیشه مسکونی', 'پرده هوشمند'],
     badge: 'بیشترین فروش',
-    image: '/images/office-alt.jpg',
+    image: '/images/office-alt.webp',
   },
   {
     id: 'pdlc-high-clarity',
@@ -36,7 +36,7 @@ const allProducts = [
     ],
     applications: ['ویلاها', 'مجتمع تجاری', 'ویترین لوکس', 'موزه و نمایشگاه'],
     badge: 'معماری لوکس',
-    image: '/images/product-glass-wall.jpg',
+    image: '/images/product-glass-wall.webp',
   },
   {
     id: 'pnlc',
@@ -50,7 +50,7 @@ const allProducts = [
     ],
     applications: ['پروژه‌های پرچمدار', 'معماری جهانی', 'خانواده‌های لوکس'],
     badge: 'بهترین تکنولوژی',
-    image: '/images/product-minimal.jpg',
+    image: '/images/product-minimal.webp',
   },
   {
     id: 'colored',
@@ -64,7 +64,7 @@ const allProducts = [
     ],
     applications: ['استودیو عکاسی', 'سینمای خانگی', 'فضاهای خلاقانه', 'مغازه‌ها'],
     badge: 'طراحی داخلی',
-    image: '/images/smart-projector.jpg',
+    image: '/images/smart-projector.webp',
   },
   {
     id: 'vip-kit',
