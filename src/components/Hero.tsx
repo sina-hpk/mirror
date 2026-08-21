@@ -65,7 +65,7 @@ export default function Hero() {
               شیشه‌های هوشمند
               <br />
               <span className="bg-gradient-to-l from-white via-primary-200 to-primary-400 bg-clip-text text-transparent">
-                مدرن، امن، هوشمند
+                شفاف یا خصوصی؛ هر زمان که بخواهید
               </span>
             </h1>
 

@@ -65,7 +65,7 @@ export default function ContactForm({ initialProduct }: { initialProduct?: strin
     setErrorMessage('')
 
     try {
-      const res = await fetch('/api/lead', {
+      const res = await fetch('/lead.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

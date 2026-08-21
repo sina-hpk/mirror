@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Static HTML export: outputs a plain `out/` folder that runs on any
+  // shared/Apache/WordPress host (no Node.js runtime needed).
+  output: 'export',
+  // Emit folder-style URLs (/products/index.html) so Apache serves them
+  // without extra rewrite rules.
+  trailingSlash: true,
   images: {
-    // Images are already pre-sized and compressed to WebP at display widths,
-    // so skip Next's runtime optimizer. This serves the static files directly
-    // (fast in dev and prod) and removes the need for the native `sharp`
-    // module, whose absence forces a slow WASM fallback (~15s per image).
+    // Static export cannot use the runtime optimizer; serve the already
+    // pre-sized/compressed WebP files directly. Also removes any need for
+    // the native `sharp` module.
     unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -14,44 +19,6 @@ const nextConfig = {
         hostname: 'cdn.jsdelivr.net',
       },
     ],
-  },
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-      {
-        source: '/:path*.svg',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
   },
 }
 
