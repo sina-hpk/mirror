@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CheckCircle, ShoppingCart, Package, Star, HelpCircle, Zap, Truck } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'محصولات | فلمبیس',
@@ -21,6 +22,7 @@ const allProducts = [
     ],
     applications: ['پارتیشن اداری', 'شیشه مسکونی', 'پرده هوشمند'],
     badge: 'بیشترین فروش',
+    image: '/images/office-alt.jpg',
   },
   {
     id: 'pdlc-high-clarity',
@@ -34,6 +36,7 @@ const allProducts = [
     ],
     applications: ['ویلاها', 'مجتمع تجاری', 'ویترین لوکس', 'موزه و نمایشگاه'],
     badge: 'معماری لوکس',
+    image: '/images/product-glass-wall.jpg',
   },
   {
     id: 'pnlc',
@@ -47,6 +50,7 @@ const allProducts = [
     ],
     applications: ['پروژه‌های پرچمدار', 'معماری جهانی', 'خانواده‌های لوکس'],
     badge: 'بهترین تکنولوژی',
+    image: '/images/product-minimal.jpg',
   },
   {
     id: 'colored',
@@ -60,6 +64,7 @@ const allProducts = [
     ],
     applications: ['استودیو عکاسی', 'سینمای خانگی', 'فضاهای خلاقانه', 'مغازه‌ها'],
     badge: 'طراحی داخلی',
+    image: '/images/smart-projector.jpg',
   },
   {
     id: 'vip-kit',
@@ -106,6 +111,18 @@ export default function ProductsPage() {
             {allProducts.map((product) => (
               <div key={product.id} id={product.id} className="scroll-mt-24">
                 <div className={`card p-8 md:p-12 overflow-hidden ${product.isKit ? 'gradient-border' : ''}`}>
+                  {product.image && (
+                    <div className="relative mb-8 h-56 w-full overflow-hidden rounded-2xl md:h-72">
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 1024px"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-surface-950/40 to-transparent" aria-hidden="true" />
+                    </div>
+                  )}
                   <div className="flex flex-wrap items-center gap-3 mb-6">
                     <span className="badge-light">{product.subtitle}</span>
                     {product.badge && (

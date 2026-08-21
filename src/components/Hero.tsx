@@ -2,6 +2,7 @@
 
 import { Shield, Zap, ExternalLink, Headphones, BadgeCheck, Power } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -106,15 +107,16 @@ export default function Hero() {
           >
             <div className="animate-float">
               <div className="gradient-border relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl shadow-primary-950/50">
-                {/* Scene behind the glass */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-400 via-primary-700 to-surface-900" />
-                <div className="absolute inset-0 bg-grid-dark opacity-60" aria-hidden="true" />
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="text-center text-white/90">
-                    <div className="text-5xl font-extrabold md:text-6xl drop-shadow-lg">فلمبیس</div>
-                    <div className="mt-2 text-sm text-white/70">نمای پشت شیشه</div>
-                  </div>
-                </div>
+                {/* Scene behind the glass: real interior photo */}
+                <Image
+                  src="/images/hero-interior.jpg"
+                  alt="نمای داخلی مدرن پشت شیشه هوشمند فلمبیس"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/30 via-transparent to-surface-900/40" aria-hidden="true" />
 
                 {/* The switchable glass overlay */}
                 <motion.div

@@ -3,6 +3,7 @@
 import { Building2, Home, Car, Projector, Building, Warehouse, Hospital, Store } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const applications = [
   {
@@ -10,42 +11,42 @@ const applications = [
     title: 'پارتیشن‌های اداری',
     description: 'مات/شفاف کردن لحظه‌ای اتاق‌های ملاقات، کابین‌های مدیریت و سالن‌های کنفرانس. افزایش تمرکز و حفظ حریم خصوصی در محیط کار.',
     benefits: ['کنترل با ریموت/اپلیکیشن', 'برنامه‌ریزی زمانی', 'یکپارچگی با سیستم هوشمند ساختمان'],
-    image: '/applications/office-partition.jpg',
+    image: '/images/office-partition.jpg',
   },
   {
     icon: Home,
     title: 'شیشه‌های مسکونی',
-    description: 'پنجره‌ها، درب‌های بالکن، حمام‌ها و قاب‌های دوخت. کنترل نور طبیعی، حفظ حریم خصوصی از همسایه‌ها و زیبایی معماری.',
+    description: 'پنجره‌ها، درب‌های بالکن، حمام‌ها و قاب‌های دوجداره. کنترل نور طبیعی، حفظ حریم خصوصی از همسایه‌ها و زیبایی معماری.',
     benefits: ['کنترل از موبایل', 'تنظیم زمان‌بندی صبح/شام', 'سازگار با خانه هوشمند'],
-    image: '/applications/residential.jpg',
+    image: '/images/residential.jpg',
   },
   {
     icon: Car,
     title: 'خودرو و حمل‌ونقل',
     description: 'شیشه‌های عقب، شیشه‌های جانبی و سقف پانوراما. کاهش نور خیره‌کننده، حریم خصوصی مسافران و کاهش مصرف سوخت با کم‌کردن نیاز به کولر.',
     benefits: ['مطابق استانداردهای ایمنی', 'کنترل جدا برای هر شیشه', 'مقاوم در برابر لرزش'],
-    image: '/applications/automotive.jpg',
+    image: '/images/automotive.jpg',
   },
   {
     icon: Projector,
     title: 'پروژکتورهای هوشمند',
-    description: 'تبدیل شیشه هوشمند به پرده پروژکشن با کیفیت ۴K. حل دوچندان: حریم خصوصی در روز، سینمای خانگی در شب.',
+    description: 'تبدیل شیشه هوشمند به پرده پروژکشن با کیفیت ۴K. حل دوگانه: حریم خصوصی در روز، سینمای خانگی در شب.',
     benefits: ['ضریب کنتراست بالا', 'زاویه دید وسیع', 'بدون نیاز به پرده جداگانه'],
-    image: '/applications/smart-projector.jpg',
+    image: '/images/smart-projector.jpg',
   },
   {
     icon: Hospital,
     title: 'بیمارستان و کلینیک',
     description: 'اتاق‌های عمل، ICU، اتاق‌های معاینه و سالن‌های انتظار. جایگزین بهداشتی و نوین برای پرده‌های پارچه‌ای.',
     benefits: ['قابل شستشو و ضدباکتری', 'کنترل پدالی/دست‌فری', 'مطابق استانداردهای بهداشتی'],
-    image: '/applications/healthcare.jpg',
+    image: '/images/healthcare.jpg',
   },
   {
     icon: Store,
     title: 'مغازه و ریتیل',
-    description: 'ویترین‌های نمایش، اتاق‌های فیتینگ و دفترهای مدیریت. جلب توجه مشتری با افکت تعاملی و امنیت بالا.',
+    description: 'ویترین‌های نمایش، اتاق‌های پرو و دفترهای مدیریت. جلب توجه مشتری با افکت تعاملی و امنیت بالا.',
     benefits: ['نمایش تعاملی برند', 'قفل الکترونیکی یکپارچه', 'مدیریت از راه دور'],
-    image: '/applications/retail.jpg',
+    image: '/images/retail.jpg',
   },
 ]
 
@@ -84,44 +85,50 @@ export default function Applications() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="card p-6 md:p-8 group relative overflow-hidden"
+              className="card group relative overflow-hidden p-0"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-primary-700/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
-              <div className="relative flex gap-6">
-                {/* Icon */}
-                <div className="relative flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 group-hover:from-primary-500 group-hover:to-accent-600 shadow-sm group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all duration-300">
-                  <app.icon className="h-8 w-8 text-primary-600 group-hover:text-white transition-colors" aria-hidden="true" />
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-xl font-bold text-surface-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <div className="relative h-52 w-full overflow-hidden">
+                <Image
+                  src={app.image}
+                  alt={app.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface-950/85 via-surface-950/25 to-transparent" aria-hidden="true" />
+                <div className="absolute bottom-4 right-4 flex items-center gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 text-white backdrop-blur-md ring-1 ring-white/20">
+                    <app.icon className="h-6 w-6" aria-hidden="true" />
+                  </span>
+                  <h3 className="text-xl font-bold text-white drop-shadow-md">
                     {app.title}
                   </h3>
-                  <p className="text-surface-600 leading-relaxed mb-4">
-                    {app.description}
-                  </p>
-
-                  {/* Benefits */}
-                  <ul className="space-y-2 mb-6" role="list">
-                    {app.benefits.map((benefit, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-surface-700">
-                        <span className="flex-shrink-0 h-1.5 w-1.5 rounded-full bg-primary-500" aria-hidden="true" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    href="#contact"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors group"
-                  >
-                    مشاوره تخصصی برای این کاربرد
-                    <svg className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
                 </div>
+              </div>
+              <div className="p-6 md:p-8">
+                <p className="text-surface-600 leading-relaxed mb-4">
+                  {app.description}
+                </p>
+
+                {/* Benefits */}
+                <ul className="space-y-2 mb-6" role="list">
+                  {app.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-surface-700">
+                      <span className="flex-shrink-0 h-1.5 w-1.5 rounded-full bg-primary-500" aria-hidden="true" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="#contact"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors group/link"
+                >
+                  مشاوره تخصصی برای این کاربرد
+                  <svg className="h-4 w-4 transition-transform group-hover/link:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
               </div>
             </motion.article>
           ))}

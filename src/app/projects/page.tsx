@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Building2, Home, Hospital, Plane, Store, Landmark } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'پروژه‌های مرجع | فلمبیس',
@@ -9,12 +10,12 @@ export const metadata = {
 }
 
 const projects = [
-  { icon: Plane, title: 'فرودگاه بین‌المللی امام خمینی(ره)', location: 'تهران', area: '۵۰۰+ متر مربع', desc: 'نصب پارتیشن‌های شیشه هوشمند PNLC در ترمینال جدید و اتاق‌های کنترل.', year: '۱۴۰۴' },
-  { icon: Hospital, title: 'بیمارستان مهر تهران', location: 'تهران', area: '۳۰۰ متر مربع', desc: 'شیشه هوشمند اتاق‌های عمل و ICU با کنترل پدالی و ضدباکتری.', year: '۱۴۰۳' },
-  { icon: Building2, title: 'مجتمع تجاری الماس', location: 'اصفهان', area: '۸۰۰ متر مربع', desc: 'ویترین‌ها و پارتیشن‌های اداری مغازه‌ها با کنترل متمرکز.', year: '۱۴۰۳' },
-  { icon: Home, title: 'مجتمع مسکونی لوکس آرمان', location: 'لواسان', area: '۲۰۰ متر مربع', desc: 'پنجره‌های سقفی و حمام‌ها با کنترل از اپلیکیشن خانه هوشمند.', year: '۱۴۰۲' },
-  { icon: Landmark, title: 'هتل پنج‌ستاره دریا', location: 'کیش', area: '۶۰۰ متر مربع', desc: 'سویییت‌ها و رستوران گردان با شیشه هوشمند ضد نم.', year: '۱۴۰۲' },
-  { icon: Store, title: 'شوروم خودرو پارس', location: 'کرج', area: '۱۵۰ متر مربع', desc: 'اتاق‌های تحویل VIP و دفتر مدیریت با کنترل حریم خصوصی.', year: '۱۴۰۱' },
+  { icon: Plane, title: 'فرودگاه بین‌المللی امام خمینی(ره)', location: 'تهران', area: '۵۰۰+ متر مربع', desc: 'نصب پارتیشن‌های شیشه هوشمند PNLC در ترمینال جدید و اتاق‌های کنترل.', year: '۱۴۰۴', image: '/images/project-conference.jpg' },
+  { icon: Hospital, title: 'بیمارستان مهر تهران', location: 'تهران', area: '۳۰۰ متر مربع', desc: 'شیشه هوشمند اتاق‌های عمل و ICU با کنترل پدالی و ضدباکتری.', year: '۱۴۰۳', image: '/images/healthcare.jpg' },
+  { icon: Building2, title: 'مجتمع تجاری الماس', location: 'اصفهان', area: '۸۰۰ متر مربع', desc: 'ویترین‌ها و پارتیشن‌های اداری مغازه‌ها با کنترل متمرکز.', year: '۱۴۰۳', image: '/images/project-office-tower.jpg' },
+  { icon: Home, title: 'مجتمع مسکونی لوکس آرمان', location: 'لواسان', area: '۲۰۰ متر مربع', desc: 'پنجره‌های سقفی و حمام‌ها با کنترل از اپلیکیشن خانه هوشمند.', year: '۱۴۰۲', image: '/images/project-villa.jpg' },
+  { icon: Landmark, title: 'هتل پنج‌ستاره دریا', location: 'کیش', area: '۶۰۰ متر مربع', desc: 'سوییت‌ها و رستوران گردان با شیشه هوشمند ضد نم.', year: '۱۴۰۲', image: '/images/project-hotel.jpg' },
+  { icon: Store, title: 'شوروم خودرو پارس', location: 'کرج', area: '۱۵۰ متر مربع', desc: 'اتاق‌های تحویل VIP و دفتر مدیریت با کنترل حریم خصوصی.', year: '۱۴۰۱', image: '/images/automotive.jpg' },
 ]
 
 export default function ProjectsPage() {
@@ -41,14 +42,26 @@ export default function ProjectsPage() {
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
-                <article key={project.title} className="card p-6 md:p-8 group">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm mb-5">
-                    <project.icon className="h-7 w-7" aria-hidden="true" />
+                <article key={project.title} className="card group overflow-hidden p-0">
+                  <div className="relative h-44 w-full overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-surface-950/80 to-transparent" aria-hidden="true" />
+                    <span className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-md ring-1 ring-white/20">
+                      <project.icon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <span className="absolute bottom-3 right-4 inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/90 text-primary-700">{project.area}</span>
                   </div>
-                  <span className="text-xs text-surface-400">{project.year} • {project.location}</span>
-                  <h2 className="text-lg font-bold text-surface-900 mt-1 mb-2 group-hover:text-primary-600 transition-colors">{project.title}</h2>
-                  <p className="text-sm text-surface-600 leading-relaxed mb-4">{project.desc}</p>
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700">{project.area}</span>
+                  <div className="p-6 md:p-7">
+                    <span className="text-xs text-surface-400">{project.year} • {project.location}</span>
+                    <h2 className="text-lg font-bold text-surface-900 mt-1 mb-2 group-hover:text-primary-600 transition-colors">{project.title}</h2>
+                    <p className="text-sm text-surface-600 leading-relaxed">{project.desc}</p>
+                  </div>
                 </article>
               ))}
             </div>
