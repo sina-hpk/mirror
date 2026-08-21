@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    // Images are already pre-sized and compressed to WebP at display widths,
+    // so skip Next's runtime optimizer. This serves the static files directly
+    // (fast in dev and prod) and removes the need for the native `sharp`
+    // module, whose absence forces a slow WASM fallback (~15s per image).
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
