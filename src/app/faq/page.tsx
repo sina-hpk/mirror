@@ -95,7 +95,7 @@ export default function FaqPage() {
         {/* CTA */}
         <section className="section bg-white">
           <div className="container-custom">
-            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-cyan-700 text-white">
+            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-accent-700 text-white">
               <div className="absolute inset-0 bg-grid-dark opacity-40" aria-hidden="true" />
               <div className="relative text-center max-w-2xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">سؤال دیگری دارید؟</h2>

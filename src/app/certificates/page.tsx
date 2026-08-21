@@ -208,7 +208,7 @@ export default function CertificatesPage() {
                   </p>
                 </div>
                 <div className="text-center border-y md:border-y-0 md:border-x border-surface-700 py-6 md:py-0">
-                  <div className="text-4xl md:text-5xl font-extrabold bg-gradient-to-l from-primary-300 to-cyan-400 bg-clip-text text-transparent mb-2">۱۰+</div>
+                  <div className="text-4xl md:text-5xl font-extrabold bg-gradient-to-l from-primary-300 to-accent-400 bg-clip-text text-transparent mb-2">۱۰+</div>
                   <div className="text-surface-400 text-sm">استاندارد بین‌المللی</div>
                 </div>
                 <div className="text-center md:text-left">

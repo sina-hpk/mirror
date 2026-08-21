@@ -83,7 +83,7 @@ export default function Features() {
             >
               <div className="relative mb-6">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-primary-700/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 group-hover:from-primary-500 group-hover:to-cyan-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary-500/30 group-hover:-translate-y-0.5 transition-all duration-300">
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 group-hover:from-primary-500 group-hover:to-accent-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary-500/30 group-hover:-translate-y-0.5 transition-all duration-300">
                   <feature.icon className="h-7 w-7" aria-hidden="true" />
                 </div>
               </div>

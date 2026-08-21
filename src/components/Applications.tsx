@@ -89,7 +89,7 @@ export default function Applications() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-primary-700/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
               <div className="relative flex gap-6">
                 {/* Icon */}
-                <div className="relative flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 group-hover:from-primary-500 group-hover:to-cyan-600 shadow-sm group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all duration-300">
+                <div className="relative flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 group-hover:from-primary-500 group-hover:to-accent-600 shadow-sm group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all duration-300">
                   <app.icon className="h-8 w-8 text-primary-600 group-hover:text-white transition-colors" aria-hidden="true" />
                 </div>
 
@@ -135,7 +135,7 @@ export default function Applications() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16"
         >
-          <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-cyan-700 text-white">
+          <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-accent-700 text-white">
             <div className="absolute inset-0 bg-grid-dark opacity-40" aria-hidden="true" />
             <div className="absolute -top-24 left-1/4 h-64 w-64 rounded-full bg-white/15 blur-3xl" aria-hidden="true" />
             <div className="relative max-w-3xl">

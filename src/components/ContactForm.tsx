@@ -115,7 +115,7 @@ export default function ContactForm({ initialProduct }: { initialProduct?: strin
                 { icon: Mail, title: 'ایمیل', desc: 'info@filmbase.ir | sales@filmbase.ir' },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 shadow-sm">
+                  <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm">
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <div>

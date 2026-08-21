@@ -109,7 +109,7 @@ export default function ServicesPage() {
               >
                 <div className="card p-8 md:p-12">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 shadow-sm">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm">
                       <service.icon className="h-7 w-7" aria-hidden="true" />
                     </div>
                     <div>
@@ -138,7 +138,7 @@ export default function ServicesPage() {
         {/* CTA */}
         <section className="section bg-white">
           <div className="container-custom">
-            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-cyan-700 text-white">
+            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-accent-700 text-white">
               <div className="absolute inset-0 bg-grid-dark opacity-40" aria-hidden="true" />
               <div className="absolute -top-24 left-1/4 h-64 w-64 rounded-full bg-white/15 blur-3xl" aria-hidden="true" />
               <div className="relative text-center max-w-2xl mx-auto">

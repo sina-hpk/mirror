@@ -61,7 +61,7 @@ export default function BuyingGuidePage() {
             {steps.map((step) => (
               <div key={step.title} className="card p-8 md:p-10">
                 <div className="flex items-start gap-5">
-                  <div className="flex-shrink-0 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 shadow-sm">
+                  <div className="flex-shrink-0 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm">
                     <step.icon className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <div>
@@ -77,7 +77,7 @@ export default function BuyingGuidePage() {
         {/* CTA */}
         <section className="section bg-white">
           <div className="container-custom">
-            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-cyan-700 text-white">
+            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-accent-700 text-white">
               <div className="absolute inset-0 bg-grid-dark opacity-40" aria-hidden="true" />
               <div className="relative text-center max-w-2xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">آماده خرید هستید؟</h2>

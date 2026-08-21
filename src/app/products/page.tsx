@@ -165,7 +165,7 @@ export default function ProductsPage() {
           <div className="container-custom">
             <div className="card p-8 md:p-12 bg-surface-50">
               <div className="flex items-start gap-4 mb-6">
-                <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 shadow-sm">
+                <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm">
                   <Star className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <div>
@@ -194,7 +194,7 @@ export default function ProductsPage() {
         {/* VIP Kit CTA */}
         <section className="section bg-surface-50">
           <div className="container-custom">
-            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-cyan-700 text-white">
+            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-accent-700 text-white">
               <div className="absolute inset-0 bg-grid-dark opacity-40" aria-hidden="true" />
               <div className="absolute -top-24 left-1/4 h-64 w-64 rounded-full bg-white/15 blur-3xl" aria-hidden="true" />
               <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

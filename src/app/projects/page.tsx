@@ -42,7 +42,7 @@ export default function ProjectsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
                 <article key={project.title} className="card p-6 md:p-8 group">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 shadow-sm mb-5">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm mb-5">
                     <project.icon className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <span className="text-xs text-surface-400">{project.year} • {project.location}</span>
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
 
         <section className="section bg-white">
           <div className="container-custom">
-            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-cyan-700 text-white">
+            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-accent-700 text-white">
               <div className="absolute inset-0 bg-grid-dark opacity-40" aria-hidden="true" />
               <div className="relative text-center max-w-2xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">پروژه شما می‌تواند بعدی باشد</h2>

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import ThemeSwitcher from './ThemeSwitcher'
 
 const navItems = [
   { href: '#features', label: 'مزایا' },
@@ -49,7 +50,7 @@ export default function Header() {
               className="flex items-center gap-2 shrink-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
               aria-label="فلمبیس - صفحه اصلی"
             >
-              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-400 via-primary-500 to-cyan-600 shadow-lg shadow-primary-500/30">
+              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-400 via-primary-500 to-accent-600 shadow-lg shadow-primary-500/30">
                 <div className="absolute inset-x-1.5 top-1.5 h-2 rounded-full bg-white/30" aria-hidden="true" />
                 <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -78,24 +79,28 @@ export default function Header() {
             </div>
 
             {/* Desktop CTA */}
-            <div className="hidden md:block">
+            <div className="hidden md:flex md:items-center md:gap-2">
+              <ThemeSwitcher solid={solid} />
               <Link href="#contact" className="btn-primary">
                 درخواست مشاوره
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className={`md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl transition-colors ${
-                solid ? 'text-surface-700 hover:bg-surface-100' : 'text-white hover:bg-white/10'
-              }`}
-              onClick={() => setIsMenuOpen(true)}
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label="باز کردن منو"
-            >
-              <Menu className="h-6 w-6" />
-            </button>
+            {/* Mobile actions */}
+            <div className="flex items-center gap-1 md:hidden">
+              <ThemeSwitcher solid={solid} />
+              <button
+                className={`inline-flex h-10 w-10 items-center justify-center rounded-xl transition-colors ${
+                  solid ? 'text-surface-700 hover:bg-surface-100' : 'text-white hover:bg-white/10'
+                }`}
+                onClick={() => setIsMenuOpen(true)}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
+                aria-label="باز کردن منو"
+              >
+                <Menu className="h-6 w-6" />
+              </button>
+            </div>
           </div>
         </nav>
       </header>

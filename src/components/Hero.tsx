@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary-950 via-surface-950 to-surface-950" />
         <div className="absolute inset-0 bg-grid-dark [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,black,transparent)]" />
         <div className="absolute -top-40 right-[10%] h-[28rem] w-[28rem] rounded-full bg-primary-600/25 blur-3xl animate-pulse-slow" />
-        <div className="absolute top-1/3 left-[5%] h-96 w-96 rounded-full bg-cyan-500/15 blur-3xl" />
+        <div className="absolute top-1/3 left-[5%] h-96 w-96 rounded-full bg-accent-500/15 blur-3xl" />
         <div className="absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-primary-500/10 blur-3xl" />
       </div>
 

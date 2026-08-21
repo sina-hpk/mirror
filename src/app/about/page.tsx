@@ -10,7 +10,7 @@ export const metadata = {
 
 const team = [
   { name: 'مهدی رضایی', role: 'مدیرعامل و بنیان‌گذار', color: 'from-primary-500 to-primary-700', initial: 'م', bio: 'بیش از ۱۵ سال تجربه در صنعت شیشه و ساختمان. فارغ‌التحصیل مهندسی مکانیک از دانشگاه تهران.' },
-  { name: 'سارا احمدی', role: 'مدیر فنی و تحقیقات', color: 'from-cyan-500 to-blue-600', initial: 'س', bio: 'متخصص تکنولوژی PDLC/PNLC با تجربه در پروژه‌های بین‌المللی. دکترای فیزیک کاربردی.' },
+  { name: 'سارا احمدی', role: 'مدیر فنی و تحقیقات', color: 'from-accent-500 to-blue-600', initial: 'س', bio: 'متخصص تکنولوژی PDLC/PNLC با تجربه در پروژه‌های بین‌المللی. دکترای فیزیک کاربردی.' },
   { name: 'علی موسوی', role: 'مدیر فروش و بازاریابی', color: 'from-violet-500 to-purple-700', initial: 'ع', bio: '۱۰ سال سابقه در فروش B2B محصولات صنعتی. متخصص توسعه بازار خاورمیانه.' },
   { name: 'نازنین کریمی', role: 'مدیر پروژه‌ها', color: 'from-emerald-500 to-teal-600', initial: 'ن', bio: 'مدیر پروژه ارشد با تجربه اجرای بیش از ۲۰۰ پروژه شیشه هوشمند در سراسر ایران.' },
 ]
@@ -51,7 +51,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="card p-8 md:p-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm">
                     <Target className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <h2 className="text-2xl font-bold text-surface-900">مأموریت ما</h2>
@@ -62,7 +62,7 @@ export default function AboutPage() {
               </div>
               <div className="card p-8 md:p-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-cyan-100 text-primary-600 shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-600 shadow-sm">
                     <Eye className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <h2 className="text-2xl font-bold text-surface-900">چشم‌انداز ما</h2>
@@ -157,7 +157,7 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="section bg-white">
           <div className="container-custom">
-            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-cyan-700 text-white">
+            <div className="card relative overflow-hidden p-8 md:p-12 border-0 bg-gradient-to-l from-primary-800 via-primary-600 to-accent-700 text-white">
               <div className="absolute inset-0 bg-grid-dark opacity-40" aria-hidden="true" />
               <div className="absolute -top-24 left-1/4 h-64 w-64 rounded-full bg-white/15 blur-3xl" aria-hidden="true" />
               <div className="relative text-center max-w-2xl mx-auto">
