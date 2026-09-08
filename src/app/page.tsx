@@ -1,11 +1,8 @@
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import Features from '@/components/Features'
-import Applications from '@/components/Applications'
-import Certificates from '@/components/Certificates'
-import Products from '@/components/Products'
-import ContactForm from '@/components/ContactForm'
-import Footer from '@/components/Footer'
+import Header from '@/components/demo2/Header'
+import Hero from '@/components/demo2/Hero'
+import ContentSections from '@/components/demo2/ContentSections'
+import LeadSection from '@/components/demo2/LeadSection'
+import Footer from '@/components/demo2/Footer'
 
 export default function HomePage() {
   return (
@@ -13,11 +10,8 @@ export default function HomePage() {
       <Header />
       <main className="flex-1" id="main-content">
         <Hero />
-        <Features />
-        <Applications />
-        <Certificates />
-        <Products />
-        <ContactForm />
+        <ContentSections />
+        <LeadSection />
       </main>
       <Footer />
     </>
