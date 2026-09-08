@@ -56,6 +56,19 @@
 .k-switcher-arrows { color: #8a8d91; font-size: .9rem; }
 .k-switcher-caption { margin-top: .9rem; color: #8a8d91; font-size: .8rem; font-weight: 600; letter-spacing: .05em; }
 
+/* سوییچر کشیدنی اتاق جلسه */
+.k-office { margin-top: 2.6rem; }
+.k-office-title { color: #26282b; font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 800; margin: 0 0 1.1rem; }
+.k-drag-switcher { max-width: 47rem; margin-inline: auto; }
+.k-drag-frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: .55rem; border: 1px solid #e3e3e3; box-shadow: 0 30px 60px rgba(38,40,43,.16); touch-action: none; cursor: ew-resize; user-select: none; -webkit-user-select: none; }
+.k-drag-frame.is-dragging { cursor: grabbing; }
+.k-drag-frame:focus-visible { outline: 2px solid #c5ac67; outline-offset: 2px; }
+.k-drag-img { object-fit: cover; pointer-events: none; }
+.k-drag-frost { position: absolute; inset: 0; pointer-events: none; }
+.k-drag-handle { position: absolute; inset-block: 0; width: 2px; background: rgba(255,255,255,.9); box-shadow: 0 0 12px rgba(38,40,43,.5); pointer-events: none; }
+.k-drag-grip { position: absolute; top: 50%; right: 50%; transform: translate(50%, -50%); display: grid; place-items: center; width: 2.3rem; height: 2.3rem; border-radius: 50%; background: rgba(38,40,43,.85); color: #c5ac67; backdrop-filter: blur(6px); box-shadow: 0 4px 14px rgba(38,40,43,.35); }
+.k-drag-caption { margin-top: .9rem; color: #8a8d91; font-size: .8rem; font-weight: 600; }
+
 .k-badges { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 62rem; margin: 2.8rem auto 0; list-style: none; padding: 0; }
 .k-badges li { display: flex; flex-direction: column; align-items: center; gap: .35rem; padding: 1.3rem 1rem; background: #fff; border: 1px solid #ececec; border-radius: .55rem; text-align: center; }
 .k-badge-icon { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; margin-bottom: .25rem; border-radius: 50%; background: rgba(197,172,103,.14); color: #a8904e; }

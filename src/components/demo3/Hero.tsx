@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Bolt, Handshake, Ruler, ShieldCheck } from 'lucide-react'
+import OfficeDragSwitcher from './OfficeDragSwitcher'
 
 const badges = [
   { icon: Bolt, title: 'حریم آنی', text: 'شفاف تا مات در کمتر از ۱ ثانیه' },
@@ -55,6 +56,12 @@ export default function Hero() {
             </button>
           </div>
           <p className="k-switcher-caption" dir="rtl">از شفاف تا مات در کمتر از یک ثانیه — روی دکمه بزنید</p>
+        </div>
+
+        {/* سوییچر کشیدنی اتاق جلسه — مات شدن تا نقطه کشش */}
+        <div className="k-office">
+          <h2 className="k-office-title">خودتان امتحان کنید: پارتیشن شیشه‌ای دفتر</h2>
+          <OfficeDragSwitcher />
         </div>
 
         <ul className="k-badges" aria-label="مزایای کلیدی">

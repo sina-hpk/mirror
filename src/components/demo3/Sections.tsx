@@ -1,6 +1,7 @@
 import { ArrowLeft, Building2, GraduationCap, HeartPulse, Home, Hotel, Landmark, ShoppingBag, Sun } from 'lucide-react'
 import Faq from './Faq'
 import QuoteForm from './QuoteForm'
+import OfficeDragSwitcher from './OfficeDragSwitcher'
 
 const benefits = [
   { title: 'حریم به‌موقع', text: 'از شفاف تا مات در کمتر از یک ثانیه — بدون پرده، کرکره یا قطعه متحرک.' },

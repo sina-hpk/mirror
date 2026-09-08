@@ -26,7 +26,8 @@ const stats = [
 ]
 
 export default function Hero() {
-  const [powered, setPowered] = useState(true)
+  /* کلید روشن = مات (حریم فعال) | خاموش = شفاف — پیش‌فرض: مات */
+  const [isTransparent, setIsTransparent] = useState(false)
 
   return (
     <section className="relative overflow-hidden bg-surface-950 pt-28 pb-20 md:pt-36 md:pb-24">
@@ -118,38 +119,46 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/30 via-transparent to-surface-900/40" aria-hidden="true" />
 
-                {/* The switchable glass overlay */}
+                {/* The switchable glass overlay: matte photo crossfade */}
                 <motion.div
-                  className="absolute inset-0 bg-surface-100/80 backdrop-blur-2xl"
-                  animate={{ opacity: powered ? 0 : 1 }}
+                  className="absolute inset-0"
+                  animate={{ opacity: isTransparent ? 0 : 1 }}
                   transition={{ duration: 0.7, ease: 'easeInOut' }}
                   aria-hidden="true"
-                />
+                >
+                  <Image
+                    src="/images/hero-interior-frost.jpg"
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </motion.div>
 
                 {/* State label */}
                 <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full bg-surface-950/60 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
-                  <span className={`h-2 w-2 rounded-full ${powered ? 'bg-primary-400' : 'bg-surface-400'}`} />
-                  {powered ? 'حالت شفاف' : 'حالت مات'}
+                  <span className={`h-2 w-2 rounded-full ${isTransparent ? 'bg-surface-400' : 'bg-primary-400'}`} />
+                  {isTransparent ? 'حالت شفاف' : 'حالت مات'}
                 </div>
 
                 {/* Interactive switch */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
                   <button
                     type="button"
-                    onClick={() => setPowered((v) => !v)}
-                    aria-pressed={powered}
-                    className="glass group flex items-center gap-3 rounded-full py-2 pl-2 pr-4 text-sm font-medium text-white shadow-xl transition-all hover:bg-white/20"
+                    onClick={() => setIsTransparent((v) => !v)}
+                    aria-pressed={!isTransparent}
+                    className="glass group flex items-center gap-2 whitespace-nowrap rounded-full py-2 pl-2 pr-3 text-xs font-medium text-white shadow-xl transition-all hover:bg-white/20 sm:gap-3 sm:pr-4 sm:text-sm"
                   >
                     <span
                       className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 ${
-                        powered
-                          ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/50'
-                          : 'bg-surface-600 text-surface-300'
+                        isTransparent
+                          ? 'bg-surface-600 text-surface-300'
+                          : 'bg-primary-500 text-white shadow-lg shadow-primary-500/50'
                       }`}
                     >
                       <Power className="h-4 w-4" aria-hidden="true" />
                     </span>
-                    {powered ? 'خاموش کردن شیشه' : 'روشن کردن شیشه'}
+                    {isTransparent ? 'فعال کردن حالت مات' : 'غیرفعال کردن حالت مات'}
                   </button>
                 </div>
               </div>

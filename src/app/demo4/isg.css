@@ -1,0 +1,188 @@
+/* ============ دموی ۴ — صفحه تماس، سبک شیشه هوشمند ایران ============ */
+
+.isg-container { width: min(1140px, 92%); margin-inline: auto; }
+
+/* نوار بالای تیره */
+.isg-topbar { display: flex; justify-content: space-between; align-items: center; background: #020620; color: #b9bdd4; font-size: .76rem; padding: .5rem 4rem; }
+.isg-topbar a.isg-topbar-item { display: inline-flex; align-items: center; gap: .4rem; color: inherit; transition: color .2s; }
+.isg-topbar a.isg-topbar-item:hover { color: #fff; }
+
+/* هدر */
+.isg-header { position: sticky; inset-block-start: 0; z-index: 40; background: #fff; border-block-end: 1px solid #e9eaee; box-shadow: 0 2px 14px rgba(2,6,32,.06); }
+.isg-header-inner { display: flex; align-items: center; gap: 2rem; padding: .8rem 0; }
+.isg-logo { display: flex; align-items: center; gap: .65rem; }
+.isg-logo-mark { width: 2.2rem; height: 2.2rem; border-radius: .5rem; background: linear-gradient(135deg, #020620, #273272); position: relative; }
+.isg-logo-mark::after { content: ''; position: absolute; inset: .58rem; border-radius: .22rem; background: #0f866c; }
+.isg-logo-text { display: flex; flex-direction: column; line-height: 1.25; }
+.isg-logo-text strong { color: #020620; font-size: 1.15rem; font-weight: 800; }
+.isg-logo-text small { color: #8d8ea3; font-size: .68rem; }
+.isg-nav { display: flex; gap: 1.7rem; margin-inline-start: auto; }
+.isg-nav a { color: #3c3f58; font-size: .93rem; font-weight: 600; padding-block: .35rem; border-block-end: 2px solid transparent; transition: all .2s; }
+.isg-nav a:hover, .isg-nav a[aria-current='page'] { color: #0f866c; border-color: #0f866c; }
+.isg-header-phone { display: inline-flex; align-items: center; gap: .45rem; padding: .55rem 1.1rem; border-radius: .4rem; background: #020620; color: #fff; font-size: .86rem; font-weight: 700; transition: background .25s; }
+.isg-header-phone:hover { background: #273272; }
+.isg-burger { display: none; flex-direction: column; gap: .32rem; background: none; border: 0; padding: .4rem; cursor: pointer; margin-inline-start: auto; }
+.isg-burger span { display: block; width: 1.35rem; height: 2px; border-radius: 2px; background: #020620; }
+.isg-mobile-nav { display: flex; flex-direction: column; border-block-start: 1px solid #eceef2; }
+.isg-mobile-nav a { padding: .85rem 1.4rem; color: #020620; font-weight: 600; border-block-end: 1px solid #f2f3f6; }
+
+/* مسیر صفحه */
+.isg-breadcrumb { background: #f4f5f9; border-block-end: 1px solid #e9eaee; font-size: .82rem; color: #8d8ea3; }
+.isg-breadcrumb .isg-container { display: flex; align-items: center; gap: .5rem; padding: .65rem 0; }
+.isg-breadcrumb a { color: #0f866c; font-weight: 600; }
+.isg-breadcrumb a:hover { text-decoration: underline; }
+
+/* بدنه */
+.isg-main { padding: 2.6rem 0 3rem; }
+
+/* هیرو */
+.isg-hero { text-align: center; margin-bottom: 2.6rem; }
+.isg-hero .isg-title { display: inline-block; max-width: 44rem; }
+.isg-hero .isg-title::after { inset-inline-start: 50%; transform: translateX(50%); }
+.isg-hero-sub { max-width: 46rem; margin: 1.1rem auto 0; color: #5c5f74; line-height: 2.05; }
+
+.isg-switcher { max-width: 47rem; margin: 2.2rem auto 0; }
+.isg-switcher-frame { position: relative; aspect-ratio: 3 / 2; overflow: hidden; border-radius: .65rem; border: 1px solid #e3e5ec; box-shadow: 0 30px 60px rgba(2,6,32,.18); }
+.isg-switcher-img { object-fit: cover; }
+.isg-switcher-frost { opacity: 0; transition: opacity .7s ease; }
+.isg-switcher-frost.is-on { opacity: 1; }
+.isg-switcher-toggle { position: absolute; inset-block-start: 1rem; inset-inline-start: 1rem; z-index: 3; display: flex; align-items: center; gap: .55rem; padding: .5rem .95rem; border: 0; border-radius: 99px; background: rgba(2,6,32,.82); backdrop-filter: blur(10px); color: #c9ccdc; font-size: .84rem; font-weight: 700; cursor: pointer; }
+.isg-switcher-toggle:focus-visible { outline: 2px solid #14bd9b; outline-offset: 2px; }
+.isg-switcher-toggle .is-active { color: #14bd9b; }
+.isg-switcher-arrows { color: #8d8ea3; font-size: .92rem; }
+.isg-switcher-caption { margin-top: .9rem; color: #8d8ea3; font-size: .8rem; font-weight: 600; }
+
+/* سوییچر کشیدنی اتاق جلسه */
+.isg-office { margin-top: 2.8rem; text-align: center; }
+.isg-office-title { color: #020620; font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 800; margin: 0 0 1.2rem; }
+.isg-drag-switcher { max-width: 47rem; margin-inline: auto; }
+.isg-drag-frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: .65rem; border: 1px solid #e3e5ec; box-shadow: 0 30px 60px rgba(2,6,32,.18); touch-action: none; cursor: ew-resize; user-select: none; -webkit-user-select: none; }
+.isg-drag-frame.is-dragging { cursor: grabbing; }
+.isg-drag-frame:focus-visible { outline: 2px solid #14bd9b; outline-offset: 2px; }
+.isg-drag-img { object-fit: cover; pointer-events: none; }
+.isg-drag-frost { position: absolute; inset: 0; pointer-events: none; }
+.isg-drag-handle { position: absolute; inset-block: 0; width: 2px; background: rgba(255,255,255,.9); box-shadow: 0 0 12px rgba(2,6,32,.5); pointer-events: none; }
+.isg-drag-grip { position: absolute; top: 50%; right: 50%; transform: translate(50%, -50%); display: grid; place-items: center; width: 2.3rem; height: 2.3rem; border-radius: 50%; background: rgba(2,6,32,.85); color: #14bd9b; backdrop-filter: blur(6px); box-shadow: 0 4px 14px rgba(2,6,32,.35); }
+.isg-drag-caption { margin-top: .9rem; color: #8d8ea3; font-size: .8rem; font-weight: 600; }
+
+.isg-title { position: relative; color: #020620; font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 800; padding-block-end: .9rem; margin: 0 0 2rem; }
+.isg-title::after { content: ''; position: absolute; inset-block-end: 0; inset-inline-start: 0; width: 4.5rem; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #0f866c, #14bd9b); }
+
+.isg-section { padding: 2.2rem 0; }
+.isg-section-gray { background: #f7f8fb; margin-inline: -4rem; padding-inline: 4rem; }
+.isg-subtitle { position: relative; color: #020620; font-size: clamp(1.25rem, 2.4vw, 1.6rem); font-weight: 800; margin: 0 0 .5rem; padding-inline-start: 1rem; border-inline-start: 4px solid #0f866c; }
+.isg-section-lead { color: #5c5f74; line-height: 2; margin: 0 0 1.8rem; }
+
+/* نشان‌های اعتماد */
+.isg-badges { display: grid; grid-template-columns: repeat(4, 1fr); gap: .9rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.isg-badges li { display: flex; flex-direction: column; align-items: center; gap: .3rem; padding: 1.15rem 1rem; background: #fff; border: 1px solid #e9eaee; border-radius: .6rem; text-align: center; transition: all .25s; }
+.isg-badges li:hover { border-color: #0f866c; box-shadow: 0 12px 28px rgba(2,6,32,.08); }
+.isg-badge-icon { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; margin-bottom: .25rem; border-radius: 50%; background: rgba(15,134,108,.1); color: #0f866c; }
+.isg-badges strong { color: #020620; font-size: .93rem; }
+.isg-badges li > span { color: #71728c; font-size: .76rem; line-height: 1.7; }
+
+/* محصولات */
+.isg-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.isg-products li { display: flex; flex-direction: column; gap: .4rem; padding: 1.4rem 1.3rem; background: #fff; border: 1px solid #e9eaee; border-radius: .6rem; transition: all .25s; }
+.isg-products li:hover { transform: translateY(-3px); border-color: #0f866c; box-shadow: 0 16px 34px rgba(2,6,32,.1); }
+.isg-products strong { color: #020620; font-size: .98rem; }
+.isg-products p { margin: 0; color: #71728c; font-size: .84rem; line-height: 1.9; flex: 1; }
+.isg-more { display: inline-flex; align-items: center; gap: .3rem; color: #0f866c; font-size: .82rem; font-weight: 700; }
+.isg-more:hover { text-decoration: underline; }
+
+/* مزایا */
+.isg-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; margin: 0; padding: 0; list-style: none; }
+.isg-benefits li { padding: 1.2rem 1.2rem; background: #fff; border: 1px solid #e9eaee; border-radius: .6rem; }
+.isg-benefits strong { display: block; color: #020620; font-size: .95rem; margin-bottom: .3rem; }
+.isg-benefits p { margin: 0; color: #71728c; font-size: .83rem; line-height: 1.9; }
+
+/* سوالات متداول */
+.isg-faq { display: grid; gap: .65rem; }
+.isg-faq-item { background: #fff; border: 1px solid #e9eaee; border-radius: .55rem; overflow: hidden; transition: border-color .2s; }
+.isg-faq-item.is-open { border-color: #0f866c; }
+.isg-faq-item button { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; padding: 1rem 1.2rem; background: none; border: 0; text-align: start; color: #020620; font-size: .95rem; font-weight: 700; cursor: pointer; }
+.isg-faq-item button svg { flex-shrink: 0; color: #0f866c; transition: transform .25s; }
+.isg-faq-item.is-open button svg { transform: rotate(180deg); }
+.isg-faq-item p { margin: 0; padding: 0 1.2rem 1.1rem; color: #5c5f74; font-size: .88rem; line-height: 2; }
+
+.isg-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 2.6rem; align-items: start; }
+
+/* کارت‌های اطلاعات */
+.isg-info { display: grid; gap: .9rem; }
+.isg-info-card { display: flex; gap: 1rem; padding: 1.25rem 1.3rem; background: #fff; border: 1px solid #e9eaee; border-radius: .6rem; transition: all .25s; }
+.isg-info-card:hover { border-color: #0f866c; box-shadow: 0 12px 28px rgba(2,6,32,.08); }
+.isg-info-icon { display: grid; place-items: center; width: 2.9rem; height: 2.9rem; flex-shrink: 0; border-radius: .55rem; background: rgba(15,134,108,.1); color: #0f866c; }
+.isg-info-card h3 { margin: 0 0 .3rem; color: #020620; font-size: 1rem; font-weight: 800; }
+.isg-info-card p { margin: 0; color: #5c5f74; font-size: .87rem; line-height: 1.95; }
+.isg-hours { background: #f7fbfa; border-color: #d7ebe5; }
+
+/* نقشه نمادین */
+.isg-map { position: relative; min-height: 190px; border-radius: .6rem; overflow: hidden; border: 1px solid #e9eaee;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(39,50,114,.08) 34px 35px),
+    repeating-linear-gradient(90deg, transparent 0 34px, rgba(39,50,114,.08) 34px 35px),
+    linear-gradient(135deg, #eef1f7, #e3e8f2);
+  display: grid; place-items: center; }
+.isg-map-pin { display: flex; flex-direction: column; align-items: center; gap: .35rem; color: #273272; font-size: .8rem; font-weight: 700; }
+.isg-map-pin svg { color: #d6002a; }
+
+/* فرم */
+.isg-form-heading { color: #020620; font-size: 1.35rem; font-weight: 800; margin: 0 0 .5rem; }
+.isg-form-lead { color: #5c5f74; line-height: 2; font-size: .95rem; margin: 0 0 1.6rem; }
+.isg-form { padding: 1.8rem 1.9rem; background: #fff; border: 1px solid #e9eaee; border-radius: .65rem; }
+.isg-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.isg-form-grid label { display: flex; flex-direction: column; gap: .35rem; }
+.isg-form-full { grid-column: 1 / -1; }
+.isg-form label > span { color: #3c3f58; font-size: .82rem; font-weight: 700; }
+.isg-form input, .isg-form select, .isg-form textarea { padding: .68rem .9rem; border: 1px solid #d5d8e2; border-radius: .4rem; font: inherit; color: #020620; background: #fbfcfe; transition: border-color .2s; }
+.isg-form input:focus, .isg-form select:focus, .isg-form textarea:focus { outline: none; border-color: #0f866c; background: #fff; }
+.isg-form em { color: #d6002a; font-size: .74rem; font-style: normal; }
+.isg-check { display: flex; align-items: flex-start; gap: .55rem; margin-top: .95rem; }
+.isg-check input { width: 1.05rem; height: 1.05rem; margin-top: .15rem; accent-color: #0f866c; }
+.isg-check span { color: #5c5f74; font-size: .8rem; line-height: 1.8; }
+.isg-check span a { color: #0f866c; font-weight: 700; }
+.isg-check-error { display: block; margin-top: .3rem; color: #d6002a; font-size: .74rem; font-style: normal; }
+.isg-form-error { margin-top: .8rem; color: #d6002a; font-size: .84rem; }
+.isg-submit { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; width: 100%; margin-top: 1.4rem; padding: .85rem 1.5rem; border: 0; border-radius: .45rem; background: #0f866c; color: #fff; font-size: .98rem; font-weight: 800; cursor: pointer; transition: background .25s; }
+.isg-submit:hover { background: #0c6b57; }
+.isg-submit:disabled { opacity: .65; cursor: wait; }
+.isg-spin { animation: isg-spin 1s linear infinite; }
+@keyframes isg-spin { to { transform: rotate(360deg); } }
+.isg-form-success { text-align: center; padding: 3rem 2rem; color: #020620; }
+.isg-form-success svg { color: #0f866c; }
+.isg-form-success h4 { margin: .8rem 0 .4rem; font-size: 1.15rem; }
+.isg-form-success p { color: #5c5f74; line-height: 1.9; margin: 0; }
+
+/* فوتر */
+.isg-footer { background: #020620; color: #b9bdd4; padding: 3.4rem 0 0; margin-block-start: 1rem; }
+.isg-footer-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 2.8rem; padding-bottom: 2.4rem; }
+.isg-footer h3 { color: #fff; font-size: 1rem; font-weight: 800; margin: 0 0 1rem; }
+.isg-footer ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .6rem; }
+.isg-footer a { color: inherit; transition: color .2s; }
+.isg-footer a:hover { color: #14bd9b; }
+.isg-footer-contact li { display: flex; align-items: flex-start; gap: .5rem; font-size: .85rem; line-height: 1.8; }
+.isg-footer-contact svg { flex-shrink: 0; margin-top: .3rem; color: #8d8ea3; }
+.isg-footer-bottom { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 1.15rem 0; border-block-start: 1px solid #1c2350; font-size: .78rem; color: #8d8ea3; }
+
+/* واکنش‌گرا */
+@media (max-width: 1024px) {
+  .isg-nav { display: none; }
+  .isg-burger { display: flex; }
+  .isg-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .isg-products, .isg-benefits { grid-template-columns: repeat(2, 1fr); }
+  .isg-badges { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .isg-topbar a.isg-topbar-item:last-child { display: none; }
+  .isg-header-phone { display: none; }
+  .isg-main { padding: 2rem 0 2.4rem; }
+  .isg-form { padding: 1.4rem 1.2rem; }
+  .isg-form-grid { grid-template-columns: 1fr; }
+  .isg-products, .isg-benefits { grid-template-columns: 1fr; }
+  .isg-badges { grid-template-columns: 1fr 1fr; gap: .7rem; }
+  .isg-section-gray { margin-inline: -1rem; padding-inline: 1rem; }
+  .isg-footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .isg-info-card, .isg-submit, .isg-nav a, .isg-header-phone, .isg-products li, .isg-badges li, .isg-faq-item button svg, .isg-switcher-frost { transition: none; }  .isg-spin { animation: none; }
+}

@@ -15,7 +15,8 @@ const metrics = [
 const assurances = ['بازدید و اندازه‌گیری', 'اجرای تخصصی', 'پشتیبانی پس از نصب']
 
 export default function Hero() {
-  const [isTransparent, setIsTransparent] = useState(true)
+  /* کلید روشن = مات (حریم فعال) | خاموش = شفاف — پیش‌فرض: مات */
+  const [isTransparent, setIsTransparent] = useState(false)
   const reduceMotion = useReducedMotion()
   const enter = reduceMotion ? {} : { initial: { opacity: 0, y: 22 }, animate: { opacity: 1, y: 0 } }
 
@@ -92,7 +93,7 @@ export default function Hero() {
               aria-hidden="true"
             />
             <div className="glass-status" aria-live="polite">
-              <span className={isTransparent ? 'is-on' : ''} />
+              <span className={!isTransparent ? 'is-on' : ''} />
               {isTransparent ? 'شفاف' : 'مات'}
             </div>
             <button
@@ -102,7 +103,7 @@ export default function Hero() {
               aria-pressed={!isTransparent}
               aria-label={`تغییر شیشه به حالت ${isTransparent ? 'مات' : 'شفاف'}`}
             >
-              <span className={`toggle-track ${isTransparent ? 'is-on' : ''}`} aria-hidden="true">
+              <span className={`toggle-track ${isTransparent ? '' : 'is-on'}`} aria-hidden="true">
                 <span><Power size={15} /></span>
               </span>
               <span>
